@@ -2,3 +2,7 @@
 Lokaverkefni í Verksmiðju 3
 # Lýsing
 ---
+# Myndbönd
+---
+# Kóði
+---
