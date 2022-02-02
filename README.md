@@ -9,6 +9,6 @@ Stefna verkefnsins er að búa til tveggja manna pingpong leik á LED skjá sem 
 
 ---
 # Kóði #
-https://github.com/hzeller/rpi-rgb-led-matrix
+ adafruit matrix library: https://github.com/hzeller/rpi-rgb-led-matrix
 
 ---
