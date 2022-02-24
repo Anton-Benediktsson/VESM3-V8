@@ -1,4 +1,7 @@
-import Leap
+# Þórhallur Tryggvason
+# Get information from leap motion controller and sends it to mqtt server
+
+import Leap     # See Python 3 section on leap motion controller
 from time import sleep
 import paho.mqtt.client as mqtt
 
@@ -31,11 +34,14 @@ def waitConnections():      # Function to connect to lmc and mqtt server
 waitConnections()
 while True:
 
-    sleep(0.25)
+    sleep(0.25)     # Amount of time between getting new information (info needs to be sent through mqtt)
     leftmost,rightmost = pollController()
     leftmost = round(leftmost)
     rightmost = round(rightmost)
 
+    # If lmc does not detect any hands it will register 0 for both players sending the player to the middle being annoying for players
+    # Following code will set position to old_pos if the sensor does not register anything
+    # If running first old_pos does not exist so the code also needs to continue if error
     if leftmost == 0 and rightmost == 0:
         try:
             leftmost = old_pos[0]
@@ -45,10 +51,12 @@ while True:
 
     old_pos = [leftmost, rightmost]
 
+    # Since there is no technically no limit to how far the sensor can detect your hands from you need to limit it to the size of the mapsize
     if leftmost < MAPSIZE[0]: leftmost = MAPSIZE[0]
     if leftmost > MAPSIZE[1]: leftmost = MAPSIZE[1]
     if rightmost < MAPSIZE[0]: rightmost = MAPSIZE[0]
     if rightmost > MAPSIZE[1]: rightmost = MAPSIZE[1]
 
+    # Sends to mqtt server
     print(f"Leftmost: {leftmost}, Rightmost: {rightmost}")
     client.publish("game/players", f"{leftmost},{rightmost}")
