@@ -10,6 +10,16 @@ Stefna verkefnsins er að búa til tveggja manna pingpong leik á LED skjá sem 
 
 ---
 
+# Myndbönd #
+
+https://youtube.com/shorts/1pWx-meHa_w?feature=share
+
+https://youtube.com/shorts/JRmPaELFF5w?feature=share
+
+https://youtube.com/shorts/fBoOpwotSGA?feature=share
+
+---
+
 # Samsetning
 
 Samsetning var mestmegnis byggð á [sand toy verkefni frá adafruit](https://learn.adafruit.com/matrix-led-sand) frá adafruit og hjálp frá [led matrix libraryinu](https://github.com/hzeller/rpi-rgb-led-matrix/tree/master/examples-api-use#remapping-coordinates).
@@ -102,15 +112,7 @@ Frá minni reynslu er daemonin frekar lélegur, það tók ca mínútu að stopp
  Við notuðum svo paho.mqtt.client til þess að tala við MQTT serverinn
 
 ---
-# Myndbönd #
 
-https://youtube.com/shorts/1pWx-meHa_w?feature=share
-
-https://youtube.com/shorts/JRmPaELFF5w?feature=share
-
-https://youtube.com/shorts/fBoOpwotSGA?feature=share
-
----
 # Kóði #
  
 * [Adafruit Matrix library](https://github.com/hzeller/rpi-rgb-led-matrix)
