@@ -1,5 +1,9 @@
 # VESM3-Vorönn-2022-Pong
 Lokaverkefni í Verksmiðju 3
+
+
+![](https://github.com/Anton-Benediktsson/VESM3-V8/blob/main/Myndir/IMG_20220225_121459.jpg)
+
 # Lýsing 
 
 Stefna verkefnsins er að búa til tveggja manna pingpong leik á LED skjá sem er samsettur af fjórum 64x64 LED Matrix skjáum sem eru tengdir við Raspberry Pi Zero og er stýrður af Leap Motion tækni í gegnum vefþjónustu.
