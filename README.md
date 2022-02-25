@@ -105,7 +105,9 @@ Frá minni reynslu er daemonin frekar lélegur, það tók ca mínútu að stopp
 # Myndbönd #
 
 https://youtube.com/shorts/1pWx-meHa_w?feature=share
+
 https://youtube.com/shorts/JRmPaELFF5w?feature=share
+
 https://youtube.com/shorts/fBoOpwotSGA?feature=share
 
 ---
