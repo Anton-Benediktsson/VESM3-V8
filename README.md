@@ -48,6 +48,16 @@ Frá minni reynslu er daemonin frekar lélegur, það tók ca mínútu að stopp
  Til að rendera leikinn erum við að nota **Pillow** *(ImageDraw og Image)*, það virkar með því að búa til nýja mynd (þarf að vera RGB því að matrix tekur ekki svart-hvítt). Það er svo notað Player.draw() function til að teikna rétthyrningana fyrir spilarana, Ball.draw() sem teiknar rétthyrning fyrir kúluna og svo teiknum við textan bara beint.
 
 ---
+
+# MQTT
+
+## Að setja upp server
+ Við notuðum eigin MQTT server sem var létt að setja upp, það þurfti bara að gera `sudo apt install mosquitto`, og búa til config skrá eins og í code/mosquitto-config. Eftir það var hægt að nota `mosquitto` command til þess að kveikja á serverinum.
+
+## MQTT python
+ Við notuðum svo paho.mqtt.client til þess að tala við MQTT serverinn
+
+---
 # Myndbönd #
 
 
