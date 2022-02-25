@@ -41,6 +41,12 @@ Frá minni reynslu er daemonin frekar lélegur, það tók ca mínútu að stopp
 ## OpenGL
  Það er **mikilvægt** að vita að *Raspberry Pi Zero* getur ekki notað nýjari en **OpenGL 4.6** og **OpenGL ES 3.2**, sem þýðir að sum libraries fyrir leiki gætu ekki virkað, við notuðum bara Pillow fyrir rendering og bygðum leikinn frá grunni til þess að vera viss um að við þurfum ekki nýajri útgáfu af OpenGL.
 
+## Að búa til on_update
+ Til þess að gera update function erum við að gera `start_time = time.time()` og svo **í while loop** `current_time = time.time()` svo er hægt að finna munin með því að nota `start_time - current_time` það er svo hægt að nota if statement til þess að framkvæma update functions hverja **0.1 sekondur**.
+
+## Að rendera mynd
+ Til að rendera leikinn erum við að nota **Pillow** *(ImageDraw og Image)*, það virkar með því að búa til nýja mynd (þarf að vera RGB því að matrix tekur ekki svart-hvítt). Það er svo notað Player.draw() function til að teikna rétthyrningana fyrir spilarana, Ball.draw() sem teiknar rétthyrning fyrir kúluna og svo teiknum við textan bara beint.
+
 ---
 # Myndbönd #
 
