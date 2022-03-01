@@ -6,7 +6,7 @@ import time
 import os
 from random import randrange
 from PIL import Image, ImageDraw
-from rgbmatrix import RGBMatrix, RGBMatrixOptions       # See API section on Led Matrix
+from rgbmatrix import RGBMatrix, RGBMatrixOptions       # See Led Matrix section in readme.md
 
 # Use RGBMatrixOptions library to set options for rgbmatrix
 options = RGBMatrixOptions()

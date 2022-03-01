@@ -99,7 +99,7 @@ Frá minni reynslu er daemonin frekar lélegur, það tók ca mínútu að stopp
  Til þess að gera update function erum við að gera `start_time = time.time()` og svo **í while loop** `current_time = time.time()` svo er hægt að finna munin með því að nota `start_time - current_time` það er svo hægt að nota if statement til þess að framkvæma update functions hverja **0.1 sekondur**.
 
 ## Að rendera mynd
- Til að rendera leikinn erum við að nota **Pillow** *(ImageDraw og Image)*, það virkar með því að búa til nýja mynd (þarf að vera RGB því að matrix tekur ekki svart-hvítt). Það er svo notað Player.draw() function til að teikna rétthyrningana fyrir spilarana, Ball.draw() sem teiknar rétthyrning fyrir kúluna og svo teiknum við textan bara beint.
+ Til að rendera leikinn erum við að nota **Pillow** *(ImageDraw og Image)*, það virkar með því að búa til nýja mynd (þarf að vera RGB því að matrix tekur ekki svart-hvítt). Það er svo notað Player.draw() function til að teikna rétthyrningana fyrir spilarana, Ball.draw() sem teiknar rétthyrning fyrir kúluna og svo teiknum við textan bara beint. Til þess að teikna myndina á skjáin getur maður notað **Matrix.SetImage(PIL_Image)**.
 
 ---
 
@@ -108,11 +108,21 @@ Frá minni reynslu er daemonin frekar lélegur, það tók ca mínútu að stopp
 ## Að setja upp server
  Við notuðum eigin MQTT server sem var létt að setja upp, það þurfti bara að gera `sudo apt install mosquitto`, og búa til config skrá eins og í code/mosquitto-config. Eftir það var hægt að nota `mosquitto` command til þess að kveikja á serverinum.
 
-## MQTT python
- Við notuðum svo paho.mqtt.client til þess að tala við MQTT serverinn
-
 ---
 
+# LED Matrix Kóðinn
+
+## Að setja upp
+ Við notuðum þessa scriptu til þess að setja upp:
+
+    https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/rgb-matrix.sh
+
+ Þessa skripta nær í allt sem þarf og tekur saman RGB Matrix library á sama tíma. Scriptan settur líka upp fyrir Python3 og það ætti að vera inní bindings.
+
+## Stillingar
+ Í Python libraryinu er RGBMatrixOptions class, þetta er notað til að setja stillingar á skjáinum. Það er nokkrar mikilvægar stillingar, í rows og cols á að sitja sömu stillingu og á að nota fyrri einn skjá en það þarf að sitja chain stillinguna á magnið af skjáum sem maður er með. Í margskjá setup þarf líka að stilla `pixel_mapper_config` til **U-mapper** og svo er Rotate bara notað til að segja hvernig skjárin á að snúast.  
+
+---
 # Kóði #
  
 * [Adafruit Matrix library](https://github.com/hzeller/rpi-rgb-led-matrix)
