@@ -113,9 +113,9 @@ Frá minni reynslu er daemonin frekar lélegur, það tók ca mínútu að stopp
 # LED Matrix Kóðinn
 
 ## Að setja upp
- Við notuðum þessa scriptu til þess að setja upp:
+ Við notuðum þessa scriptu til þess að setja upp fyrir Raspberry Pi:
 
-    https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/rgb-matrix.sh
+    curl https://raw.githubusercontent.com/adafruit/Raspberry-Pi-Installer-Scripts/master/rgb-matrix.sh > rgb-matrix.sh
 
  Þessa skripta nær í allt sem þarf og tekur saman RGB Matrix library á sama tíma. Scriptan settur líka upp fyrir Python3 og það ætti að vera inní bindings.
 
@@ -130,4 +130,6 @@ Frá minni reynslu er daemonin frekar lélegur, það tók ca mínútu að stopp
 * [Leap SDK](https://developer-archive.leapmotion.com/documentation/csharp/devguide/Leap_SDK_Overview.html)
 
 * [LMC Python 3](https://github.com/BlackLight/leap-sdk-python3)
+
+* [Adafruit Matrix Sand toy](https://learn.adafruit.com/matrix-led-sand)
 ---
